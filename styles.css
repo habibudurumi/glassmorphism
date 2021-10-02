@@ -1,0 +1,111 @@
+/** @format */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: url(./images/backdrop5.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.form {
+  border: 2px solid #ccc;
+  width: 500px;
+  padding: 3rem;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.form h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+.form .const {
+  margin: 3rem auto;
+  position: relative;
+}
+
+.const label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+
+.const input {
+  width: 100%;
+  padding: 0.5rem 0;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.2s all;
+  border-bottom: 2px solid #fff;
+}
+input:focus + label,
+input:valid + label {
+  transform: translateY(-18px);
+  font-size: 0.9rem;
+  color: #ccc;
+  letter-spacing: 1px;
+  font-weight: bolder;
+}
+
+.btn {
+  margin: 2rem auto;
+  padding: 0.5rem 5rem;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid #999;
+  border-radius: 4px;
+  color: #222;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s ease-in-out background;
+}
+
+.btn:hover {
+  background: #ccc;
+}
+
+@media (max-width: 550px) {
+  body {
+    background-position: center;
+    background-blend-mode: saturation;
+  }
+  .form {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .section {
+    margin: 1rem auto;
+    max-width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+  }
+}
